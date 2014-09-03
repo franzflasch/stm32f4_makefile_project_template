@@ -47,13 +47,13 @@ PROJECT        = stm32f4_template
 
 # Source directories
 LINKERSCRIPT 		= ./linkerscript/stm32_flash.ld
-APP_INC_DIR			= ./app/inc
+APP_INC_DIR		= ./app/inc
 
 # APPLICATION SPECIFIC
 SRC  = ./app/src/main.c
 ASM_SRC = 
 
-INCDIRS = $(APPINCDIR)
+INCDIRS = $(APP_INC_DIR)
 
 # include submakefiles here
 include makefile_std_lib.mk # STM32 Standard Peripheral Library
