@@ -51,7 +51,12 @@ APP_INC_DIR		= ./app/inc
 
 # APPLICATION SPECIFIC
 SRC  = ./app/src/main.c
+# Further sources have to be specified with "+="
+#SRC += 
+
 ASM_SRC = 
+# Further sources have to be specified with "+="
+#ASM_SRC += 
 
 INCDIRS = $(APP_INC_DIR)
 
