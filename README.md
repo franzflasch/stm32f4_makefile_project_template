@@ -1,12 +1,12 @@
-# STM32F1 Discovery Makefile Template Project
+# STM32F4 Discovery Makefile Template Project
 
-This Makefile project is set up for the STM32F1 Discovery Board. It was set up as a consequence of the latest GNU ARM eclipse plugin, which does not fit my needs anymore. It is a modified version of https://github.com/halherta/iotogglem0_wspl.
+This Makefile project is set up for the STM32F4 Discovery Board. It was set up as a consequence of the latest GNU ARM eclipse plugin, which does not fit my needs anymore. It is a modified version of https://github.com/halherta/iotogglem0_wspl.
 
 ## Prerequisites
 
 Working GNU ARM GCC (https://launchpad.net/gcc-arm-embedded)
 
-Texane stlink to flash the STM32F1 Discovery Board (https://github.com/texane/stlink)
+Texane stlink to flash the STM32F4 Discovery Board (https://github.com/texane/stlink)
 
 ## Usage
 
@@ -23,7 +23,7 @@ To rebuild project do "make clean" and "make all".
 ## Makefile structure
 
 The project is structured in a common directory structure. It consists of a master makefile "Makefile" and a second *.mk Makefile.
-The file makefile_std_lib.mk defines the sources and compiler options for building the STM32F1 Standard Peripheral Library. Further 
+The file makefile_std_lib.mk defines the sources and compiler options for building the STM32F4 Standard Peripheral Library. Further 
 external libraries should also be splitted in their own *.mk files to achieve a well strucured mcu project. All further *.mk files 
 have to be included in the master Makefile.
 
