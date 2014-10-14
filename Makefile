@@ -43,14 +43,14 @@ DDEFS =
 OPT = -Os
 
 # Define project name and Ram/Flash mode here
-PROJECT        = stm32f4_template
+PROJECT	= stm32f4_template
 
 # Source directories
-LINKERSCRIPT 		= ./linkerscript/stm32_flash.ld
-APP_INC_DIR		= ./app/inc
+LINKERSCRIPT	= ./linkerscript/stm32_flash.ld
+APP_INC_DIR	= ./app/inc
 
 # APPLICATION SPECIFIC
-SRC  = ./app/src/main.c
+SRC = ./app/src/main.c
 # Further sources have to be specified with "+="
 #SRC += 
 
