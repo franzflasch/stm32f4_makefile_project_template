@@ -84,7 +84,7 @@ LDFLAGS = $(MCFLAGS) -g -gdwarf-2 -mthumb -nostartfiles -Xlinker --gc-sections -
 # makefile rules
 # 
 all: $(OBJS) $(PROJECT).elf  $(PROJECT).hex $(PROJECT).bin
-	$(TRGT)size $(PROJECT).elf
+	$(CCPREFIX)size $(PROJECT).elf
  
 %o: %c
 	$(CC) -c $(CPFLAGS) -I . $(INCDIR) $< -o $@

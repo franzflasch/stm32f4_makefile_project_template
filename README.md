@@ -1,6 +1,6 @@
 # STM32F4 Discovery Makefile Template Project
 
-This Makefile project is set up for the STM32F4 Discovery Board. It was set up as a consequence of the latest GNU ARM eclipse plugin, which does not fit my needs anymore. It is a modified version of https://github.com/halherta/iotogglem0_wspl.
+This is a "bare shell" Makefile project for the STM32F4 Discovery Board. It was created as a consequence of the latest GNU ARM eclipse plugin, which does not fit my needs anymore. It is a modified version of https://github.com/halherta/iotogglem0_wspl.
 
 ## Prerequisites
 
