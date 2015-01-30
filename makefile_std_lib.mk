@@ -8,7 +8,7 @@ STM32F4_STD_LIB		= ./STM32F4xx_StdPeriph_Driver
 STM32F4_SRC_DIR		= ./$(STM32F4_STD_LIB)/src
 STM32F4_INC_DIR		= ./$(STM32F4_STD_LIB)/inc
 
-ASM_SRC += ./$(STM32F4_DEV_DIR)/Source/Templates/gcc_ride7/startup_stm32f40xx.s
+ASM_SRC += ./$(STM32F4_DEV_DIR)/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.s
 
 # CMSIS
 SRC += ./$(STM32F4_DEV_DIR)/Source/Templates/system_stm32f4xx.c

@@ -42,6 +42,13 @@ DDEFS =
 # Define optimisation level here
 OPT = -Os
 
+# Enable FPU
+#OPT += -mthumb 
+OPT += -mfloat-abi=hard
+OPT += -mfpu=fpv4-sp-d16
+OPT += -fsingle-precision-constant
+OPT += -fno-common
+
 # Define project name and Ram/Flash mode here
 PROJECT	= stm32f4_template
 
@@ -52,7 +59,7 @@ APP_INC_DIR	= ./app/inc
 # APPLICATION SPECIFIC
 SRC = ./app/src/main.c
 # Further sources have to be specified with "+="
-#SRC += 
+SRC += ./app/src/newlib_stubs.c 
 
 ASM_SRC = 
 # Further sources have to be specified with "+="
@@ -73,11 +80,11 @@ OBJS  	= $(ASM_SRC:.s=.o) $(SRC:.c=.o)
 
 MCFLAGS = -mcpu=$(MCU)
 
-ASFLAGS = $(MCFLAGS) -g -gdwarf-2 -mthumb  -Wa,-amhls=$(<:.s=.lst) 
+ASFLAGS = $(MCFLAGS) $(OPT) -g -gdwarf-2 -mthumb  -Wa,-amhls=$(<:.s=.lst) 
 CPFLAGS = $(MCFLAGS) $(OPT) -g -gdwarf-2 -mthumb -fomit-frame-pointer -Wall -fverbose-asm -Wa,-ahlms=$(<:.c=.lst) $(DEFS)
 
 # "-Xlinker --gc-sections" - removes unused code from the output binary - saves memory
-LDFLAGS = $(MCFLAGS) -g -gdwarf-2 -mthumb -nostartfiles -Xlinker --gc-sections -T$(LINKERSCRIPT) -Wl,-Map=$(PROJECT).map,--cref,--no-warn-mismatch $(LIBDIR) $(LIB)
+LDFLAGS = $(MCFLAGS) $(OPT) -lm -g -gdwarf-2 -mthumb -nostartfiles -Xlinker --gc-sections -T$(LINKERSCRIPT) -Wl,-Map=$(PROJECT).map,--cref,--no-warn-mismatch $(LIBDIR) $(LIB)
 
 
 #
